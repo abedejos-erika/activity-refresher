@@ -41,3 +41,6 @@ console.log(studentList.getStudents());
 console.log(studentList.updateCourse("2015-105867", "BSIT"));
 console.log(studentList.updateCollege("2015-105868","College of Computer Studies"));
 console.log(studentList.updateAddress("2015-105869", "Binangonan, Rizal"));
+console.log(studentList.numberOfStudent());
+console.log(studentList.deletestudent("2015-105867"));
+console.log(studentList.numberOfStudent());

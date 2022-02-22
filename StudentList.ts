@@ -91,22 +91,18 @@ export class StudentList {
 
     }
 
-    returnstudent(id:string){
-    const student = ['student1', 'student2', 'student3'];
-
-    //console.log(student.length);
+    numberOfStudent(){
+        return this.students.length;
     }
 
-   // deletestudent(id:string){
-    //const student = ['student1', 'student2', 'student3'];
-    //student.splice(0);
-    //console.log(student);
 
     deletestudent(id: string) {
-    let student = this.students.find(element => element.studentId === id);
+    let index = this.students.findIndex(element => element.studentId === id);
 
-    if (student) {
-        //student.splice(0);
+    if (index > -1) {
+        this.students.splice(index,1);
+        return "Student has been successfully deleted.";
+
     }
 
     return "Student id doesnt exists";
