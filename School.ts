@@ -5,7 +5,7 @@ const student1 = new Student(
     "2015-105867",
     "BSCPE",
     "CEIT",
-    "Jhon Rhay",
+    "Gerard",
     20,
     "MALE",
     "PASAY CITY"
@@ -15,7 +15,7 @@ const student2 = new Student(
     "2015-105868",
     "BSCPE",
     "CEIT",
-    "Jhon Rhay",
+    "Erika",
     20,
     "MALE",
     "PASAY CITY"
@@ -25,7 +25,7 @@ const student3 = new Student(
     "2015-105869",
     "BSCPE",
     "CEIT",
-    "Jhon Rhay",
+    "Luren",
     20,
     "MALE",
     "PASAY CITY"
@@ -38,9 +38,6 @@ const studentList = new StudentList([
 ]);
 
 console.log(studentList.getStudents());
-// console.log("*************");
-// console.log(studentList.updateStudentName("2015-105869", "Michael Jordan"));
-// console.log("*************");
-console.log(studentList.updateAge("2015-105869", 25));
-// console.log(studentList.checkStudentId("2015-105870"));
-console.log(studentList.getStudents());
+console.log(studentList.updateCourse("2015-105867", "BSIT"));
+console.log(studentList.updateCollege("2015-105868","College of Computer Studies"));
+console.log(studentList.updateAddress("2015-105869", "Binangonan, Rizal"));

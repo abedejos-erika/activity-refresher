@@ -7,6 +7,7 @@ export class StudentList {
         this.students = students
     }
 
+
     getStudents() {
         return this.students;
     }
@@ -55,17 +56,60 @@ export class StudentList {
     }
 
     updateCourse(id: string, courseName: string) {
+        let student = this.students.find(element => element.studentId === id);
+
+        if (student) {
+            student.course = courseName;
+            return student;
+        }
+
+        return "Student id doesnt exists";
 
     }
 
     updateCollege(id: string, collegeName: string) {
+        let student = this.students.find(element => element.studentId === id);
+
+        if (student) {
+            student.college = collegeName;
+            return student;
+        }
+
+        return "Student id doesnt exists";
 
     }
 
     updateAddress(id: string, address: string) {
+        let student = this.students.find(element => element.studentId === id);
+
+        if (student) {
+            student.address = address;
+            return student;
+        }
+
+        return "Student id doesnt exists";
 
     }
 
-    // create method and return number of students
-    // delete one student and return list of students, use splice method (index, 1)
+    returnstudent(id:string){
+    const student = ['student1', 'student2', 'student3'];
+
+    //console.log(student.length);
+    }
+
+   // deletestudent(id:string){
+    //const student = ['student1', 'student2', 'student3'];
+    //student.splice(0);
+    //console.log(student);
+
+    deletestudent(id: string) {
+    let student = this.students.find(element => element.studentId === id);
+
+    if (student) {
+        //student.splice(0);
+    }
+
+    return "Student id doesnt exists";
+
+}
 }
